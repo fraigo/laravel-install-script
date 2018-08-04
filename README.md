@@ -1,6 +1,12 @@
 # laravel-install-script
 Laravel installation and configuration script for first time
 
+## Installation / Execution of script
+
+```bash
+bash <(curl -s https://fraigo.github.io/laravel-install-script/laravel-install.sh)
+```
+
 ## References
 
 * https://laravel.com/docs/5.6/installation
