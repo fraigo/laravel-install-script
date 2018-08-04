@@ -33,9 +33,9 @@ cp .env.example .env
 php artisan key:generate
 
 ## Modify config file
-In laravel-app/config/app.php, change APP_DEBUG to true
-
-  'debug' => env('APP_DEBUG', true),
+### In laravel-app/config/app.php, change APP_DEBUG to true
+nano laravel-app/config/app.php
+##  'debug' => env('APP_DEBUG', true),
 
 ## Start local service
 php artisan serve
