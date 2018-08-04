@@ -62,9 +62,7 @@ composer install
 
 ### Modify config file 
 
-`laravel-app/config/app.php`
-
-Change APP_DEBUG to true
+In `laravel-app/config/app.php`, change APP_DEBUG to true
 
 ```php
   'debug' => env('APP_DEBUG', true),
@@ -75,4 +73,9 @@ Change APP_DEBUG to true
 ```bash
 php artisan serve
 ```
+
+### Open local application
+
+http://localhost:8000/
+
 
