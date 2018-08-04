@@ -9,12 +9,13 @@ Laravel installation and configuration script for first time
 ## Installation steps 
 
 1. Install php 
-2. Install php dependencies
-2. Install composer
-3. Install laravel
-4. Create a new Laravel project
-5. Update dependencies
-6. Start local service
+1. Install php dependencies
+1. Install composer
+1. Install laravel
+1. Create a new Laravel project
+1. Update dependencies
+1. Create environment
+1. Start local service
 
 
 ## Installation details
@@ -58,6 +59,16 @@ cd laravel-app
 
 ```bash
 composer install
+```
+
+### Create environment
+
+* Create initial .env file using the template file .env.example
+* Creating a security key for the application
+
+```bash
+cp .env.example .env
+php artisan key:generate
 ```
 
 ### Modify config file 
