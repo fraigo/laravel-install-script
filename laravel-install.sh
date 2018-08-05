@@ -3,42 +3,47 @@
 # Laravel installation script
 # https://github.com/fraigo/laravel-install-script/
 
-## Install PHP
+message () {
+  echo -e "\033[0;32m$1\033[0m"
+}
+
+message "Install PHP"
 sudo apt-get update
 sudo apt-get install php
 
-## Install php dependencies
+message "Install php dependencies"
 sudo apt-get install php-zip
 sudo apt-get install php-mbstring
 
-## Install composer
+message "Install composer"
 sudo apt-get install composer
 
-## Install laravel
+message "Install laravel"
 composer global require "laravel/installer"
 PATH=$PATH:$HOME/.config/composer/vendor/bin
 echo 'PATH=$PATH:$HOME/.config/composer/vendor/bin' >> $HOME/.bashrc
 
-## Create a new Laravel project
+message "Create a new Laravel project"
 laravel new laravel-app
 cd laravel-app
 
-## Update dependencies
+message "Update dependencies"
 composer install
 
-## Create environment
+message "Create environment"
 ### Create initial .env file using the template file .env.example
 ### Creating a security key for the application
 cp .env.example .env
 php artisan key:generate
 
-## Modify config file
-### In laravel-app/config/app.php, change APP_DEBUG to true
-nano laravel-app/config/app.php
-##  'debug' => env('APP_DEBUG', true),
 
-## Start local service
+message "Modify config file"
+### In laravel-app/config/app.php, change APP_DEBUG to true
+##  'debug' => env('APP_DEBUG', true),
+nano laravel-app/config/app.php
+
+message "Start local service"
 php artisan serve
 
-## Open local application
+message "Open local application"
 http://localhost:8000/
