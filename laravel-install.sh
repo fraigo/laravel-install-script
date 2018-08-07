@@ -37,13 +37,12 @@ cp .env.example .env
 php artisan key:generate
 
 
-message "Modify config file"
-### In laravel-app/config/app.php, change APP_DEBUG to true
+## message "Modify config file"
+## In laravel-app/config/app.php, change APP_DEBUG to true
 ##  'debug' => env('APP_DEBUG', true),
-nano laravel-app/config/app.php
 
-message "Start local service"
+
+message "Starting local application service"
+echo "Point your browser to http://localhost:8000/"
 php artisan serve
 
-message "Open local application"
-http://localhost:8000/
