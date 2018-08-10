@@ -77,12 +77,12 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### Modify config file 
+### Activate debug mode (optional)
 
-In `laravel-app/config/app.php`, change APP_DEBUG to true
+In `laravel-app/.env`, change APP_DEBUG to true
 
-```php
-  'debug' => env('APP_DEBUG', true),
+```
+APP_DEBUG=true
 ```
 
 ### Start local service
